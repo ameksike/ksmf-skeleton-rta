@@ -1,0 +1,32 @@
+{
+  "name": "ksmf-template-rta",
+  "version": "1.0.0",
+  "description": "This is a template for create simple RTA server with KsMf framework",
+  "main": "node server/bin/server.js",
+  "scripts": {
+    "start": "node server/bin/server.js",
+    "test": "cd client && npm run test",
+    "dev": "nodemon server/bin/server.js"
+  },
+  "author": {
+    "name": "Antonio Membrides Espinosa",
+    "email": "tonykssa@gmail.com",
+    "url": "https://github.com/ameksike"
+  },
+  "keywords": [
+    "KsDs",
+    "KsMf",
+    "RTA",
+    "Server",
+    "Ksike"
+  ],
+  "homepage": "https://github.com/ameksike/ksmf-skeleton-rta",
+  "license": "ISC",
+  "dependencies": {
+    "ksmf": "^1.0.45"
+  },
+  "devDependencies": {
+    "jest": "26.6.0",
+    "nodemon": "^2.0.15"
+  }
+}

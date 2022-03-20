@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  apprta:
+    container_name: apprta
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5003:3005
+    environment:
+      - APPNAME=6c7748bd0ad3fbdff996e81581ad64d6
+    volumes: 
+      - './client/:/app/client/'
+      - './server/:/app/server/'

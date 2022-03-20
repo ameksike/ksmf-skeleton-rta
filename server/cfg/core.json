@@ -1,0 +1,81 @@
+{
+    "development": {
+        "port": 80,
+        "host": "localhost",
+        "protocol": "http",
+        "public": "../client/build/",
+        "static": "/",
+        "log": 1,
+        "module": {
+            "load": [
+                "app"
+            ]
+        },
+        "security": {
+            "acl": {
+                "strategy": "deny",
+                "allow": {
+                    "user": {
+                        "tony": {
+                            "url": [
+                                ".*"
+                            ]
+                        },
+                        "sergio": {
+                            "url": [
+                                ".*github.com.*"
+                            ]
+                        },
+                        "*": {
+                            "url": [
+                                ".*google.com.*"
+                            ]
+                        }
+                    }
+                },
+                "deny": {
+                    "user": {
+                        "tony": {
+                            "url": [
+                                ".*nicepage.com.*"
+                            ]
+                        },
+                        "*": {
+                            "url": [
+                                ".*google.com.*"
+                            ]
+                        }
+                    }
+                }
+            },
+            "usr": {
+                "tony": {
+                    "name": "Mr. Tony",
+                    "password": "abcd-1234"
+                },
+                "sergui": {
+                    "name": "Mr. Sergio",
+                    "password": "123654"
+                }
+            }
+        },
+        "event": {},
+        "helper": {
+            "logger": {
+                "name": "ksmf",
+                "type": "lib",
+                "namespace": "app.Logger"
+            },
+            "rule": {
+                "name": "ksmf",
+                "type": "lib",
+                "namespace": "proxy.Rule"
+            },
+            "auth": {
+                "name": "ksmf",
+                "type": "lib",
+                "namespace": "proxy.Auth"
+            }
+        }
+    }
+}
