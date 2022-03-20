@@ -1,2 +1,2 @@
 # KsMf RTA Skeleton 
-Simple Real Time App Template based on KsMf
+Simple Real Time App Template based on KsMf. Note that, a real-time application (RTA) is an application program that functions within a time frame that the user senses as immediate or current. The latency must be less than a defined value, usually measured in seconds. Whether or not a given application qualifies as an RTA depends on the worst-case execution time (WCET), the maximum length of time a defined task or set of tasks requires on a given hardware platform. The use of RTAs is called real-time computing (RTC).
