@@ -9,7 +9,7 @@
  * */
 try {
     const KsMf = require('ksmf');
-    const app = new KsMf.proxy.App(__dirname + "/../");
+    const app = new KsMf.app.RTA(__dirname + "/../");
     module.exports = app.run();
 }
 catch (error) {

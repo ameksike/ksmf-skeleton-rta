@@ -23,7 +23,8 @@
   "homepage": "https://github.com/ameksike/ksmf-skeleton-rta",
   "license": "ISC",
   "dependencies": {
-    "ksmf": "^1.0.45"
+    "ksmf": "^1.0.45",
+    "socket.io": "^4.4.1"
   },
   "devDependencies": {
     "jest": "26.6.0",
