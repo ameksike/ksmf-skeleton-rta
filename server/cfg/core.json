@@ -13,7 +13,7 @@
                 "action": "list"
             }
         ],
-        "route": {},
+        "route": [],
         "event": {},
         "module": {
             "load": [

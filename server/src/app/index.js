@@ -13,6 +13,14 @@ const fs = require('fs');
 class AppModule extends KsMf.app.Module {
     async initApp() {
         const app = this.helper.get('app').web;
+        //... define channels 
+        this.channels = [
+            {
+                "route": "chat:delete",
+                "controller": "DefaultController",
+                "action": "delete"
+            }
+        ]
         //... add support for ForestAdmin, Angular and React Js Router options 
         app.get(/\/((?!(api|forest)).)*/, (req, res) => {
             const index = path.join(__dirname, '../../' + this.opt.srv.public, 'index.html');
