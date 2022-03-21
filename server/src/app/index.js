@@ -10,15 +10,10 @@ const KsMf = require('ksmf');
 const path = require('path');
 const fs = require('fs');
 
-const ProxyPeverse = require('./service/ProxyPeverse');
-
 class AppModule extends KsMf.app.Module {
     async initApp() {
         const app = this.helper.get('app').web;
         //... add support for ForestAdmin, Angular and React Js Router options 
-
-        app.use(ProxyPeverse.middleware(this.helper.get('app')));
-
         app.get(/\/((?!(api|forest)).)*/, (req, res) => {
             const index = path.join(__dirname, '../../' + this.opt.srv.public, 'index.html');
             try {
